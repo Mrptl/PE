@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details | Dev Patel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .project-header {
+            padding: 150px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(108, 99, 255, 0.1), transparent 70%);
+        }
+
+        .project-title-large {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .project-details-section {
+            padding: 0 0 80px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+
+        .detail-card {
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .detail-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .detail-card ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .detail-card li {
+            margin-bottom: 10px;
+        }
+
+        .tech-tag {
+            display: inline-block;
+            padding: 8px 15px;
+            background: rgba(108, 99, 255, 0.1);
+            color: var(--primary-color);
+            border-radius: 20px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(108, 99, 255, 0.2);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 200px;
+            background-color: #333;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-title-large {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dev Patel<span style="color: var(--secondary-color);">.</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link">Skills</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <div class="container">
+            <h1 class="project-title-large gradient-text" id="p-title">Project Title</h1>
+            <div class="project-meta">
+                <span id="p-category">Category</span>
+                <span>•</span>
+                <span id="p-date">2024</span>
+            </div>
+            <div class="project-actions">
+                <a href="#" class="btn" id="p-github"><i class="fab fa-github"></i> View Code</a>
+                <a href="projects.html" class="btn btn-outline">Back to Projects</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Project Details -->
+    <section class="project-details-section">
+        <div class="container">
+            <div class="details-grid">
+                <!-- Left Column -->
+                <div class="main-content">
+                    <div class="detail-card glass reveal">
+                        <h3>Overview</h3>
+                        <p id="p-overview">Project overview goes here.</p>
+                    </div>
+
+                    <div class="detail-card glass reveal">
+                        <h3>Key Features</h3>
+                        <ul id="p-features">
+                            <li>Feature 1</li>
+                            <li>Feature 2</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card glass reveal">
+                        <h3>Challenges & Learnings</h3>
+                        <p id="p-challenges">Challenges faced and what was learned.</p>
+                    </div>
+
+                    <div class="detail-card glass reveal">
+                        <h3>Screenshots</h3>
+                        <div class="gallery-grid" id="p-gallery">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="sidebar">
+                    <div class="detail-card glass reveal">
+                        <h3>Tech Stack</h3>
+                        <div id="p-tech">
+                            <!-- Populated by JS -->
+                        </div>
+                    </div>
+
+                    <div class="detail-card glass reveal">
+                        <h3>Dataset Info</h3>
+                        <p id="p-dataset">Dataset information goes here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Mrptl" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dev-patel1405/" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/devptl.14/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/MrPtl0" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Dev Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Project Data
+        const projectsData = {
+            "sentiment": {
+                title: "Sentiment Analysis Web App",
+                category: "Machine Learning / Web",
+                overview: "A comprehensive web application that analyzes the sentiment of user-provided text. It leverages multiple NLP models including TextBlob, VADER, and a fine-tuned BERT model to provide accurate sentiment classification (Positive, Negative, Neutral).",
+                features: [
+                    "Real-time sentiment analysis",
+                    "Comparison between different models",
+                    "Visual representation of sentiment scores",
+                    "User-friendly interface"
+                ],
+                challenges: "Integrating the heavy BERT model into a lightweight Flask application and optimizing inference time.",
+                tech: ["Python", "Flask", "BERT", "TextBlob", "VADER", "HTML/CSS"],
+                dataset: "IMDB Movie Reviews Dataset for training the BERT model.",
+                github: "#"
+            },
+            "vibe": {
+                title: "Vibe Coding Assistant",
+                category: "AI / Web",
+                overview: "An AI-powered coding assistant designed to help developers write code faster. It uses a large language model to generate code snippets based on natural language descriptions.",
+                features: [
+                    "Code generation from text prompts",
+                    "Syntax highlighting",
+                    "Support for multiple languages",
+                    "Clean and modern UI"
+                ],
+                challenges: "Handling context window limitations and ensuring code correctness.",
+                tech: ["React", "Node.js", "OpenAI API", "Tailwind CSS"],
+                dataset: "N/A (Pre-trained LLM)",
+                github: "#"
+            },
+            "dressing": {
+                title: "Virtual Dressing Prototype",
+                category: "Machine Learning",
+                overview: "A prototype for a virtual try-on system. It uses diffusion models to overlay clothing items onto user-uploaded photos, maintaining realistic lighting and texture.",
+                features: [
+                    "Image-to-Image generation",
+                    "Realistic clothing overlay",
+                    "Support for different clothing types"
+                ],
+                challenges: "Maintaining the structural integrity of the clothing item while warping it to fit the body.",
+                tech: ["Python", "PyTorch", "Stable Diffusion", "OpenCV"],
+                dataset: "DeepFashion Dataset",
+                github: "#"
+            },
+            "dashboard": {
+                title: "Data Visualization Dashboard",
+                category: "Data Science / Web",
+                overview: "An interactive dashboard for visualizing complex datasets. It allows users to upload CSV files and automatically generates various charts and graphs to uncover insights.",
+                features: [
+                    "CSV file upload",
+                    "Automatic chart generation",
+                    "Interactive filtering",
+                    "Export capabilities"
+                ],
+                challenges: "Handling large datasets efficiently in the browser.",
+                tech: ["Flask", "D3.js", "Pandas", "Bootstrap"],
+                dataset: "Various sample datasets (Sales, Demographics)",
+                github: "#"
+            },
+            "expense": {
+                title: "Expense Tracker",
+                category: "Web Development",
+                overview: "A full-stack application to track personal finances. Users can add income and expenses, view monthly summaries, and visualize spending habits.",
+                features: [
+                    "User authentication",
+                    "CRUD operations for transactions",
+                    "Monthly reports",
+                    "Category-wise breakdown"
+                ],
+                challenges: "Designing a secure and efficient database schema.",
+                tech: ["Flask", "MySQL", "JavaScript", "Chart.js"],
+                dataset: "User-generated data",
+                github: "#"
+            },
+            "simple-lr": {
+                title: "Simple Linear Regression",
+                category: "Machine Learning",
+                overview: "A fundamental ML project demonstrating Simple Linear Regression. It predicts a continuous target variable based on a single feature.",
+                features: [
+                    "Data preprocessing",
+                    "Model training",
+                    "Visualization of regression line",
+                    "Performance metrics (MSE, R2)"
+                ],
+                challenges: "Understanding the underlying mathematics of gradient descent.",
+                tech: ["Python", "Scikit-learn", "Matplotlib", "NumPy"],
+                dataset: "Student Study Hours vs Scores",
+                github: "#"
+            },
+            "multiple-lr": {
+                title: "Income Prediction",
+                category: "Machine Learning",
+                overview: "A Multiple Linear Regression model that predicts an individual's income based on factors like age and years of experience.",
+                features: [
+                    "Multivariate analysis",
+                    "Feature scaling",
+                    "Model evaluation",
+                    "Prediction interface"
+                ],
+                challenges: "Handling multicollinearity among features.",
+                tech: ["Python", "Pandas", "Scikit-learn", "Seaborn"],
+                dataset: "Salary Data (Age, Experience, Income)",
+                github: "#"
+            },
+            "house-price": {
+                title: "House Price Prediction",
+                category: "Machine Learning",
+                overview: "A robust machine learning model to predict house prices. It involves extensive EDA, feature engineering, and model selection (XGBoost).",
+                features: [
+                    "Advanced EDA",
+                    "Feature engineering",
+                    "Hyperparameter tuning",
+                    "High accuracy prediction"
+                ],
+                challenges: "Dealing with missing values and categorical variables.",
+                tech: ["Python", "XGBoost", "Pandas", "Scikit-learn"],
+                dataset: "Boston Housing Dataset / Kaggle House Prices",
+                github: "#"
+            },
+            "smart-viz": {
+                title: "Smart Data Insights",
+                category: "Data Science / ML",
+                overview: "My Final Year Project: An automated tool that takes a dataset as input and generates a comprehensive report with visualizations and textual insights using NLP and statistical analysis.",
+                features: [
+                    "Automated EDA",
+                    "Natural Language Insights",
+                    "One-click report generation",
+                    "Support for multiple file formats"
+                ],
+                challenges: "Generating meaningful textual descriptions for statistical findings.",
+                tech: ["Python", "Streamlit", "AutoViz", "Pandas", "NLP"],
+                dataset: "Various datasets for testing",
+                github: "#"
+            }
+        };
+
+        // Populate Page
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const projectId = params.get('id');
+
+            if (projectId && projectsData[projectId]) {
+                const data = projectsData[projectId];
+
+                document.getElementById('p-title').textContent = data.title;
+                document.getElementById('p-category').textContent = data.category;
+                document.getElementById('p-overview').textContent = data.overview;
+                document.getElementById('p-challenges').textContent = data.challenges;
+                document.getElementById('p-dataset').textContent = data.dataset;
+                document.getElementById('p-github').href = data.github;
+
+                // Features
+                const featuresList = document.getElementById('p-features');
+                featuresList.innerHTML = '';
+                data.features.forEach(feature => {
+                    const li = document.createElement('li');
+                    li.textContent = feature;
+                    featuresList.appendChild(li);
+                });
+
+                // Tech Stack
+                const techContainer = document.getElementById('p-tech');
+                techContainer.innerHTML = '';
+                data.tech.forEach(tech => {
+                    const span = document.createElement('span');
+                    span.className = 'tech-tag';
+                    span.textContent = tech;
+                    techContainer.appendChild(span);
+                });
+
+                // Gallery (Placeholders)
+                const gallery = document.getElementById('p-gallery');
+                gallery.innerHTML = '';
+                for (let i = 0; i < 3; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'gallery-item';
+                    div.innerHTML = `<div style="width:100%; height:100%; background: #444; display:flex; align-items:center; justify-content:center; color:#888;">Screenshot ${i + 1}</div>`;
+                    gallery.appendChild(div);
+                }
+            } else {
+                // Handle invalid ID
+                document.querySelector('.container').innerHTML = '<h2>Project not found</h2><a href="projects.html" class="btn">Back to Projects</a>';
+            }
+        });
+    </script>
+</body>
+
+</html>

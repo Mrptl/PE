@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Dev Patel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .skills-section {
+            padding: 120px 0 60px;
+        }
+
+        .skills-category {
+            margin-bottom: 60px;
+        }
+
+        .category-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .category-title i {
+            font-size: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary-color);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+            transition: color 0.3s ease;
+        }
+
+        .skill-card:hover .skill-icon {
+            color: var(--secondary-color);
+        }
+
+        .skill-name {
+            font-weight: 500;
+        }
+
+        /* Custom icons for skills that might not be in FontAwesome free */
+        .icon-python {
+            color: #3776AB;
+        }
+
+        .icon-js {
+            color: #F7DF1E;
+        }
+
+        .icon-html {
+            color: #E34F26;
+        }
+
+        .icon-css {
+            color: #1572B6;
+        }
+
+        .icon-sql {
+            color: #00758F;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Dev Patel<span style="color: var(--secondary-color);">.</span></a>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="skills.html" class="nav-link active">Skills</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="resume.html" class="nav-link">Resume</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <li id="theme-toggle" class="theme-toggle"><i class="fas fa-moon"></i></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <h2 class="section-title reveal">My Skills</h2>
+
+            <!-- Programming Languages -->
+            <div class="skills-category reveal">
+                <h3 class="category-title"><i class="fas fa-code"></i> Programming Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fab fa-python skill-icon icon-python"></i>
+                        <span class="skill-name">Python</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fab fa-js skill-icon icon-js"></i>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fab fa-html5 skill-icon icon-html"></i>
+                        <span class="skill-name">HTML5</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fab fa-css3-alt skill-icon icon-css"></i>
+                        <span class="skill-name">CSS3</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-database skill-icon icon-sql"></i>
+                        <span class="skill-name">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data Science -->
+            <div class="skills-category reveal">
+                <h3 class="category-title"><i class="fas fa-chart-bar"></i> Data Science</h3>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fas fa-calculator skill-icon"></i>
+                        <span class="skill-name">NumPy</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-table skill-icon"></i>
+                        <span class="skill-name">Pandas</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        <span class="skill-name">Matplotlib</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-chart-area skill-icon"></i>
+                        <span class="skill-name">Seaborn</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-brain skill-icon"></i>
+                        <span class="skill-name">Scikit-learn</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-search-plus skill-icon"></i>
+                        <span class="skill-name">EDA</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skills-category reveal">
+                <h3 class="category-title"><i class="fas fa-robot"></i> Machine Learning</h3>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fas fa-chart-line skill-icon"></i>
+                        <span class="skill-name">Regression</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-project-diagram skill-icon"></i>
+                        <span class="skill-name">Classification</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-cogs skill-icon"></i>
+                        <span class="skill-name">Model Building</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skills-category reveal">
+                <h3 class="category-title"><i class="fas fa-laptop-code"></i> Web Development</h3>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fas fa-pepper-hot skill-icon"></i> <!-- Flask icon replacement -->
+                        <span class="skill-name">Flask</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-layer-group skill-icon"></i>
+                        <span class="skill-name">Frontend</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-server skill-icon"></i>
+                        <span class="skill-name">Backend</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skills-category reveal">
+                <h3 class="category-title"><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-card glass">
+                        <i class="fab fa-git-alt skill-icon"></i>
+                        <span class="skill-name">Git</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fab fa-github skill-icon"></i>
+                        <span class="skill-name">GitHub</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-database skill-icon"></i>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-book skill-icon"></i>
+                        <span class="skill-name">Jupyter</span>
+                    </div>
+                    <div class="skill-card glass">
+                        <i class="fas fa-code skill-icon"></i>
+                        <span class="skill-name">VS Code</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Mrptl" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dev-patel1405/" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/devptl.14/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/MrPtl0" class="social-icon"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Dev Patel. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
