@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Products & Equipment | Prayash Engineering</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Prayash Engineering Products: EOT Cranes, Material Handling Equipment, Hydraulic Hose Assemblies, and Industrial Spares.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <span>📞 +91 84013 44694</span>
+                <span style="margin-left: 20px;">✉ info@prayashengineering.com</span>
+            </div>
+            <div><span>ISO 9001:2015 Certified</span></div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-flex">
+            <a href="index.html"><img src="assets/logo.png" alt="Prayash Engineering" class="logo"></a>
+
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="products.html" class="active">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="hero"
+        style="padding: 100px 0; background: linear-gradient(rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.9)), url('assets/hero-industrial.jpg'); background-size: cover; background-position: center;">
+        <div class="container text-center">
+            <h1 style="font-size: 3rem; margin-bottom: 10px; color: var(--white);">Products & Equipment</h1>
+            <p style="color: #cbd5e1; max-width: 600px; margin: auto; font-size: 1.2rem;">Engineered equipment designed
+                for strength, endurance, and industrial safety.</p>
+        </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="products-section">
+        <div class="container">
+
+            <!-- Category Filter Tabs -->
+            <div class="product-filters">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="cranes">Cranes</button>
+                <button class="filter-btn" data-category="handling">Material Handling</button>
+                <button class="filter-btn" data-category="hydraulics">Hydraulics</button>
+                <button class="filter-btn" data-category="spares">Spares</button>
+            </div>
+
+            <div class="products-grid">
+
+                <!-- Product 1 -->
+                <div class="product-card" data-category="cranes">
+                    <div class="product-image">
+                        <img src="assets/hero-industrial.jpg" alt="EOT & Gantry Cranes">
+                        <div class="product-overlay">
+                            <button class="view-details-btn" data-product="1">View Details</button>
+                        </div>
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Lifting Equipment</span>
+                        <h3>EOT & Gantry Cranes</h3>
+                        <p>Heavy-duty lifting solutions designed for longevity.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Up to 50 Tonnes</span>
+                            <span class="feature-tag">Custom Built</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="handling">
+                    <div class="product-image">
+                        <img src="assets/about-industrial.jpg" alt="Material Handling Gear">
+                        <div class="product-overlay">
+                            <button class="view-details-btn" data-product="2">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Shop Floor Equipment</span>
+                        <h3>Material Handling Gear</h3>
+                        <p>Equipment engineered to improve shop-floor efficiency.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">Safety Certified</span>
+                            <span class="feature-tag">Heavy Duty</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="hydraulics">
+                    <div class="product-image">
+                        <img src="assets/hero-industrial.jpg" alt="Hydraulic Assemblies">
+                        <div class="product-overlay">
+                            <button class="view-details-btn" data-product="3">View Details</button>
+                        </div>
+                        <span class="product-badge new">New</span>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Hydraulic Systems</span>
+                        <h3>Hydraulic Assemblies</h3>
+                        <p>High-pressure hose assemblies and fittings.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">High Pressure</span>
+                            <span class="feature-tag">Leak-Free</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="spares">
+                    <div class="product-image">
+                        <img src="assets/about-industrial.jpg" alt="Industrial Spares">
+                        <div class="product-overlay">
+                            <button class="view-details-btn" data-product="4">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-category">Spare Parts</span>
+                        <h3>Industrial Spares</h3>
+                        <p>Precision-machined spare parts for import substitution.</p>
+                        <div class="product-features">
+                            <span class="feature-tag">OEM Quality</span>
+                            <span class="feature-tag">Quick Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product Image">
+                </div>
+                <div class="modal-info">
+                    <span class="modal-category" id="modalCategory"></span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <h4>Key Features:</h4>
+                    <ul id="modalFeatures"></ul>
+                    <a href="contact.html" class="btn btn-primary">Request Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Product Section Styles */
+        .products-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        /* Filter Tabs */
+        .product-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 50px;
+        }
+
+        .filter-btn {
+            padding: 12px 28px;
+            border: 2px solid var(--border);
+            background: var(--white);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 114, 188, 0.3);
+        }
+
+        /* Products Grid */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 114, 188, 0.15);
+        }
+
+        .product-card.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            position: absolute;
+            pointer-events: none;
+        }
+
+        /* Product Image */
+        .product-image {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 114, 188, 0.9), transparent);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 30px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .view-details-btn {
+            padding: 12px 30px;
+            background: var(--white);
+            color: var(--primary);
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover .view-details-btn {
+            transform: translateY(0);
+        }
+
+        .view-details-btn:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* Product Badge */
+        .product-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--primary);
+            color: var(--white);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-badge.new {
+            background: #10b981;
+        }
+
+        /* Product Content */
+        .product-content {
+            padding: 25px;
+        }
+
+        .product-category {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-content h3 {
+            margin: 10px 0;
+            font-size: 1.4rem;
+            color: var(--secondary);
+        }
+
+        .product-content p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .feature-tag {
+            background: rgba(0, 114, 188, 0.1);
+            color: var(--primary);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Modal Styles */
+        .product-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .product-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-backdrop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            position: relative;
+            background: var(--white);
+            border-radius: 16px;
+            max-width: 900px;
+            width: 90%;
+            max-height: 90vh;
+            overflow: auto;
+            transform: scale(0.9) translateY(30px);
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .product-modal.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: var(--light-bg);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .modal-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width: 768px) {
+            .modal-body {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .modal-image {
+            height: 100%;
+            min-height: 300px;
+        }
+
+        .modal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-info {
+            padding: 40px;
+        }
+
+        .modal-category {
+            color: var(--primary);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+        }
+
+        .modal-info h2 {
+            margin: 10px 0 20px;
+            color: var(--secondary);
+        }
+
+        .modal-info h4 {
+            margin: 25px 0 15px;
+            color: var(--secondary);
+        }
+
+        .modal-info ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .modal-info ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-muted);
+        }
+
+        .modal-info ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+    </style>
+
+    <!-- CUSTOM CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Don't See What You Need?</h2>
+            <p>We specialize in Custom Engineering. If you can design it, we can build it.</p>
+            <a href="contact.html" class="btn btn-secondary">Discuss Your Requirement</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <img src="assets/logo.png" alt="Prayash Engineering" class="footer-logo-img">
+                    <p>Total engineering solutions focused on precision, safety, and reliability.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Cranes</a></li>
+                        <li><a href="products.html">Hydraulics</a></li>
+                        <li><a href="products.html">Spares</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>Plot No. 129, GIDC Savli, Vadodara</p>
+                    <p>+91 84013 44694</p>
+                    <p>info@prayashengineering.com</p>
+                </div>
+            </div>
+            <div class="copy">
+                <p>&copy; 2025 Prayash Engineering. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Widgets -->
+    <div class="floating-container">
+        <div class="floating-btn scroll-top-btn" id="scrollTopBtn"
+            onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+            <img src="assets/arrow-up.png" alt="Scroll to Top">
+        </div>
+        <a href="https://wa.me/918401759383" target="_blank" class="floating-btn whatsapp-btn">
+            <img src="assets/whatsapp.png" alt="WhatsApp">
+        </a>
+    </div>
+
+    <!-- Products Interactivity Script -->
+    <script>
+        // Product Data
+        const productData = {
+            1: {
+                category: 'Lifting Equipment',
+                title: 'EOT & Gantry Cranes',
+                image: 'assets/hero-industrial.jpg',
+                description: 'Heavy-duty lifting solutions designed for longevity. We manufacture Single and Double Girder cranes tailored to your span and load requirements.',
+                features: [
+                    'Capacities up to 50 Tonnes',
+                    'Robust structural design',
+                    'Includes operator cabins & remote systems',
+                    'Custom span and height configurations',
+                    'Complete installation & commissioning'
+                ]
+            },
+            2: {
+                category: 'Shop Floor Equipment',
+                title: 'Material Handling Gear',
+                image: 'assets/about-industrial.jpg',
+                description: 'Equipment engineered to improve shop-floor efficiency. Our handling solutions are safety-certified and built tough.',
+                features: [
+                    'Spreader Beams & Lifting Tackles',
+                    'Industrial Trollies & Pallets',
+                    'Custom Goods Lifts',
+                    'Safety-certified equipment',
+                    'Engineered for durability'
+                ]
+            },
+            3: {
+                category: 'Hydraulic Systems',
+                title: 'Hydraulic Assemblies',
+                image: 'assets/hero-industrial.jpg',
+                description: 'High-pressure hose assemblies and fittings for critical hydraulic machinery. We ensure leak-free performance under demanding conditions.',
+                features: [
+                    'High-Pressure Hoses (R1, R2, 4SP)',
+                    'Stainless Steel & MS Fittings',
+                    'Quick Release Couplings (QRC)',
+                    'Leak-free performance guarantee',
+                    'Custom lengths and configurations'
+                ]
+            },
+            4: {
+                category: 'Spare Parts',
+                title: 'Industrial Spares',
+                image: 'assets/about-industrial.jpg',
+                description: 'Precision-machined spare parts for import substitution. Get the same quality as OEMs at a fraction of the cost and lead time.',
+                features: [
+                    'Gearbox internals & Shafts',
+                    'Machined Castings',
+                    'Custom Replacement Parts',
+                    'OEM-equivalent quality',
+                    'Faster delivery than imports'
+                ]
+            }
+        };
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+
+                // Filter products with animation
+                productCards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.classList.remove('hidden');
+                        card.style.animation = 'fadeInUp 0.5s ease forwards';
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Modal Functionality
+        const modal = document.getElementById('productModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalBackdrop = document.querySelector('.modal-backdrop');
+        const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+
+        viewDetailsBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const productId = btn.dataset.product;
+                const product = productData[productId];
+
+                if (product) {
+                    document.getElementById('modalImage').src = product.image;
+                    document.getElementById('modalCategory').textContent = product.category;
+                    document.getElementById('modalTitle').textContent = product.title;
+                    document.getElementById('modalDescription').textContent = product.description;
+
+                    const featuresList = document.getElementById('modalFeatures');
+                    featuresList.innerHTML = product.features.map(f => `<li>${f}</li>`).join('');
+
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        function closeModal() {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        modalClose.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
