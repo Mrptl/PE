@@ -1,6 +1,41 @@
 document.addEventListener('DOMContentLoaded', function () {
     const scrollTopBtn = document.getElementById('scrollTopBtn');
 
+    // Smooth scroll to top with easing animation
+    function smoothScrollToTop() {
+        const startPosition = window.pageYOffset;
+        const duration = 800; // Animation duration in ms
+        let startTime = null;
+
+        // Easing function for smooth deceleration
+        function easeOutCubic(t) {
+            return 1 - Math.pow(1 - t, 3);
+        }
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const timeElapsed = currentTime - startTime;
+            const progress = Math.min(timeElapsed / duration, 1);
+            const easeProgress = easeOutCubic(progress);
+
+            window.scrollTo(0, startPosition * (1 - easeProgress));
+
+            if (timeElapsed < duration) {
+                requestAnimationFrame(animation);
+            }
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    // Add click event to scroll button
+    if (scrollTopBtn) {
+        scrollTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            smoothScrollToTop();
+        });
+    }
+
     // Show/Hide button based on scroll position
     window.addEventListener('scroll', function () {
         if (window.scrollY > 300) {
@@ -50,6 +85,4 @@ if (contactForm) {
 
         window.location.href = `mailto:info@prayashengineering.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     });
-
-
-
+}
