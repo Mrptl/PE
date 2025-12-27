@@ -3,12 +3,86 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Products & Equipment | Prayash Engineering</title>
+    <title>Industrial Products & Equipment | EOT Cranes, Hydraulics | Prayash Engineering Gujarat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Prayash Engineering Products: EOT Cranes, Material Handling Equipment, Hydraulic Hose Assemblies, and Industrial Spares.">
+        content="Buy industrial products from Prayash Engineering: EOT Cranes, Gantry Cranes, Material Handling Equipment, Hydraulic Hose Assemblies, and Industrial Spares. Custom manufacturing available.">
+    <meta name="keywords"
+        content="EOT crane price India, gantry crane manufacturer, hydraulic hose assembly, industrial spares Gujarat, material handling equipment, crane spare parts, custom lifting equipment, industrial machinery India">
+    <meta name="author" content="Prayash Engineering">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.prayashengineering.com/products.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prayashengineering.com/products.html">
+    <meta property="og:title" content="Industrial Products - EOT Cranes, Hydraulics & Equipment">
+    <meta property="og:description"
+        content="EOT Cranes, Gantry Cranes, Material Handling Equipment, Hydraulic Hose Assemblies, and Industrial Spares from Prayash Engineering.">
+    <meta property="og:image" content="https://www.prayashengineering.com/assets/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Industrial Products - Prayash Engineering">
+    <meta name="twitter:description"
+        content="Quality industrial products: EOT Cranes, Hydraulics, Material Handling Equipment.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Structured Data - Product List -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Industrial Products by Prayash Engineering",
+        "description": "Industrial equipment and products manufactured by Prayash Engineering",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                    "@type": "Product",
+                    "name": "EOT & Gantry Cranes",
+                    "description": "Heavy-duty lifting solutions with capacities up to 50 Tonnes",
+                    "brand": {"@type": "Brand", "name": "Prayash Engineering"}
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                    "@type": "Product",
+                    "name": "Material Handling Gear",
+                    "description": "Safety-certified equipment for shop-floor efficiency",
+                    "brand": {"@type": "Brand", "name": "Prayash Engineering"}
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                    "@type": "Product",
+                    "name": "Hydraulic Assemblies",
+                    "description": "High-pressure hose assemblies and fittings",
+                    "brand": {"@type": "Brand", "name": "Prayash Engineering"}
+                }
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                    "@type": "Product",
+                    "name": "Industrial Spares",
+                    "description": "Precision-machined spare parts for import substitution",
+                    "brand": {"@type": "Brand", "name": "Prayash Engineering"}
+                }
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
@@ -67,7 +141,7 @@
                 <!-- Product 1 -->
                 <div class="product-card" data-category="cranes">
                     <div class="product-image">
-                        <img src="assets/hero-industrial.jpg" alt="EOT & Gantry Cranes">
+                        <img src="assets/Brochure/shippingimg/shipping1.png" alt="EOT & Gantry Cranes">
                         <div class="product-overlay">
                             <button class="view-details-btn" data-product="1">View Details</button>
                         </div>
@@ -87,7 +161,7 @@
                 <!-- Product 2 -->
                 <div class="product-card" data-category="handling">
                     <div class="product-image">
-                        <img src="assets/about-industrial.jpg" alt="Material Handling Gear">
+                        <img src="assets/Brochure/handlingimg/handling4.png" alt="Material Handling Gear">
                         <div class="product-overlay">
                             <button class="view-details-btn" data-product="2">View Details</button>
                         </div>
@@ -106,7 +180,7 @@
                 <!-- Product 3 -->
                 <div class="product-card" data-category="hydraulics">
                     <div class="product-image">
-                        <img src="assets/hero-industrial.jpg" alt="Hydraulic Assemblies">
+                        <img src="assets/Brochure/hydraulicimg/hydraulic1.png" alt="Hydraulic Assemblies">
                         <div class="product-overlay">
                             <button class="view-details-btn" data-product="3">View Details</button>
                         </div>
@@ -126,7 +200,7 @@
                 <!-- Product 4 -->
                 <div class="product-card" data-category="spares">
                     <div class="product-image">
-                        <img src="assets/about-industrial.jpg" alt="Industrial Spares">
+                        <img src="assets/Brochure/spareimg/spares8.png" alt="Industrial Spares">
                         <div class="product-overlay">
                             <button class="view-details-btn" data-product="4">View Details</button>
                         </div>
@@ -153,7 +227,16 @@
             <button class="modal-close" id="modalClose">&times;</button>
             <div class="modal-body">
                 <div class="modal-image">
-                    <img id="modalImage" src="" alt="Product Image">
+                    <div class="carousel-container">
+                        <div class="carousel-slides" id="carouselSlides">
+                            <!-- Images will be inserted dynamically -->
+                        </div>
+                        <button class="carousel-btn carousel-prev" id="carouselPrev">❮</button>
+                        <button class="carousel-btn carousel-next" id="carouselNext">❯</button>
+                        <div class="carousel-dots" id="carouselDots">
+                            <!-- Dots will be inserted dynamically -->
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-info">
                     <span class="modal-category" id="modalCategory"></span>
@@ -491,6 +574,101 @@
             color: var(--primary);
             font-weight: bold;
         }
+
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            min-height: 350px;
+            overflow: hidden;
+            border-radius: 16px 0 0 16px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                border-radius: 16px 16px 0 0;
+                min-height: 250px;
+            }
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+            z-index: 10;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-btn:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .carousel-prev {
+            left: 15px;
+        }
+
+        .carousel-next {
+            right: 15px;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .carousel-dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .carousel-dot.active {
+            background: var(--primary);
+            border-color: white;
+            transform: scale(1.2);
+        }
     </style>
 
     <!-- CUSTOM CTA -->
@@ -541,8 +719,7 @@
 
     <!-- Floating Widgets -->
     <div class="floating-container">
-        <div class="floating-btn scroll-top-btn" id="scrollTopBtn"
-            onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <div class="floating-btn scroll-top-btn" id="scrollTopBtn">
             <img src="assets/arrow-up.png" alt="Scroll to Top">
         </div>
         <a href="https://wa.me/918401759383" target="_blank" class="floating-btn whatsapp-btn">
@@ -552,12 +729,22 @@
 
     <!-- Products Interactivity Script -->
     <script>
-        // Product Data
+        // Product Data with Image Carousels
         const productData = {
             1: {
                 category: 'Lifting Equipment',
                 title: 'EOT & Gantry Cranes',
-                image: 'assets/hero-industrial.jpg',
+                images: [
+                    'assets/Brochure/shippingimg/shipping1.png',
+                    'assets/Brochure/shippingimg/shipping2.png',
+                    'assets/Brochure/shippingimg/shipping3.png',
+                    'assets/Brochure/shippingimg/shipping4.png',
+                    'assets/Brochure/shippingimg/shipping5.png',
+                    'assets/Brochure/shippingimg/shipping6.png',
+                    'assets/Brochure/shippingimg/shipping7.png',
+                    'assets/Brochure/shippingimg/shipping8.png',
+                    'assets/Brochure/shippingimg/shipping9.jpg'
+                ],
                 description: 'Heavy-duty lifting solutions designed for longevity. We manufacture Single and Double Girder cranes tailored to your span and load requirements.',
                 features: [
                     'Capacities up to 50 Tonnes',
@@ -570,7 +757,15 @@
             2: {
                 category: 'Shop Floor Equipment',
                 title: 'Material Handling Gear',
-                image: 'assets/about-industrial.jpg',
+                images: [
+                    'assets/Brochure/handlingimg/handling1.png',
+                    'assets/Brochure/handlingimg/handling2.png',
+                    'assets/Brochure/handlingimg/handling3.png',
+                    'assets/Brochure/handlingimg/handling4.png',
+                    'assets/Brochure/handlingimg/handling5.png',
+                    'assets/Brochure/handlingimg/handling6.png'
+
+                ],
                 description: 'Equipment engineered to improve shop-floor efficiency. Our handling solutions are safety-certified and built tough.',
                 features: [
                     'Spreader Beams & Lifting Tackles',
@@ -583,7 +778,17 @@
             3: {
                 category: 'Hydraulic Systems',
                 title: 'Hydraulic Assemblies',
-                image: 'assets/hero-industrial.jpg',
+                images: [
+                    'assets/Brochure/hydraulicimg/hydraulic1.png',
+                    'assets/Brochure/hydraulicimg/hydraulic2.png',
+                    'assets/Brochure/hydraulicimg/hydraulic3.png',
+                    'assets/Brochure/hydraulicimg/hydraulic4.png',
+                    'assets/Brochure/hydraulicimg/hydraulic5.png',
+                    'assets/Brochure/hydraulicimg/hydraulic6.png',
+                    'assets/Brochure/hydraulicimg/hydraulic7.png',
+                    'assets/Brochure/hydraulicimg/hydraulic8.png',
+                    'assets/Brochure/hydraulicimg/hydraulic9.png'
+                ],
                 description: 'High-pressure hose assemblies and fittings for critical hydraulic machinery. We ensure leak-free performance under demanding conditions.',
                 features: [
                     'High-Pressure Hoses (R1, R2, 4SP)',
@@ -596,7 +801,17 @@
             4: {
                 category: 'Spare Parts',
                 title: 'Industrial Spares',
-                image: 'assets/about-industrial.jpg',
+                images: [
+                    'assets/Brochure/spareimg/spares8.png',
+                    'assets/Brochure/spareimg/spares1.png',
+                    'assets/Brochure/spareimg/spares2.png',
+                    'assets/Brochure/spareimg/spares3.png',
+                    'assets/Brochure/spareimg/spares4.png',
+                    'assets/Brochure/spareimg/spares5.png',
+                    'assets/Brochure/spareimg/spares6.png',
+                    'assets/Brochure/spareimg/spares7.png',
+                    'assets/Brochure/spareimg/spares9.png'
+                ],
                 description: 'Precision-machined spare parts for import substitution. Get the same quality as OEMs at a fraction of the cost and lead time.',
                 features: [
                     'Gearbox internals & Shafts',
@@ -632,11 +847,63 @@
             });
         });
 
-        // Modal Functionality
+        // Modal & Carousel Functionality
         const modal = document.getElementById('productModal');
         const modalClose = document.getElementById('modalClose');
         const modalBackdrop = document.querySelector('.modal-backdrop');
         const viewDetailsBtns = document.querySelectorAll('.view-details-btn');
+        const carouselSlides = document.getElementById('carouselSlides');
+        const carouselDots = document.getElementById('carouselDots');
+        const carouselPrev = document.getElementById('carouselPrev');
+        const carouselNext = document.getElementById('carouselNext');
+
+        let currentSlide = 0;
+        let totalSlides = 0;
+
+        // Initialize carousel with images
+        function initCarousel(images) {
+            currentSlide = 0;
+            totalSlides = images.length;
+
+            // Create slides
+            carouselSlides.innerHTML = images.map((img, index) =>
+                `<div class="carousel-slide"><img src="${img}" alt="Product Image ${index + 1}"></div>`
+            ).join('');
+
+            // Create dots
+            carouselDots.innerHTML = images.map((_, index) =>
+                `<div class="carousel-dot ${index === 0 ? 'active' : ''}" data-slide="${index}"></div>`
+            ).join('');
+
+            // Add click events to dots
+            document.querySelectorAll('.carousel-dot').forEach(dot => {
+                dot.addEventListener('click', () => {
+                    goToSlide(parseInt(dot.dataset.slide));
+                });
+            });
+
+            updateCarousel();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            updateCarousel();
+        }
+
+        function updateCarousel() {
+            carouselSlides.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+            // Update dots
+            document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        // Navigation buttons
+        carouselPrev.addEventListener('click', () => goToSlide(currentSlide - 1));
+        carouselNext.addEventListener('click', () => goToSlide(currentSlide + 1));
 
         viewDetailsBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -644,7 +911,9 @@
                 const product = productData[productId];
 
                 if (product) {
-                    document.getElementById('modalImage').src = product.image;
+                    // Initialize carousel with product images
+                    initCarousel(product.images);
+
                     document.getElementById('modalCategory').textContent = product.category;
                     document.getElementById('modalTitle').textContent = product.title;
                     document.getElementById('modalDescription').textContent = product.description;
@@ -667,8 +936,10 @@
         modalBackdrop.addEventListener('click', closeModal);
 
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeModal();
+            if (modal.classList.contains('active')) {
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') goToSlide(currentSlide - 1);
+                if (e.key === 'ArrowRight') goToSlide(currentSlide + 1);
             }
         });
 
